@@ -1,5 +1,5 @@
 
-sd = 'icons/'	# Icons podmapa
+sd = 'icons/'	# icons podmapa
 
 # Polje naziva ikona koje odgovaraju opisima vremena
 icons = [ 
