@@ -1,8 +1,7 @@
 
-sd = 'icons/'	# Icon sub-directory name.
+sd = 'icons/'	# Icons podmapa
 
-# The forcast includes an icon index number.  Below is an ordered array that has the
-# icon filename for the icon index.
+# Polje naziva ikona koje odgovaraju opisima vremena
 icons = [ 
 	'thunderstorms.png',	# 0 - Thunderstorms
 	'windy.png',			# 1 - Windy Rain
