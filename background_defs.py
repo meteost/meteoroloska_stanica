@@ -1,4 +1,4 @@
-bd = 'backgrounds/'	# Background podmapa
+bd = 'backgrounds/'	# backgrounds podmapa
 
 # Polje naziva slika koje odgovaraju opisima vremena
 backgrounds = [ 
