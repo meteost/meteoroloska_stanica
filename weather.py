@@ -25,7 +25,7 @@ HALF_HEIGHT = MAX_HEIGHT/2
 QUARTER_HEIGHT = MAX_HEIGHT/4
 white = (255,255,255)
 green = (0,255,0)
-window = 's' #pocetni je weather prikaz
+window = 'w' #pocetni je weather prikaz
 
 #postavljanje prozora
 pygame.init()
@@ -56,8 +56,8 @@ while running:
 				running = False
 			
 	screen.fill((0, 0, 0))
-	"""
-	#dovacanje podataka za odredeni grad
+	
+	#dohvacanje podataka za odredeni grad
 	result = pywapi.get_weather_from_weather_com('HRXX0019', units = 'metric')
 	
 	#pozadinska slika
@@ -65,7 +65,7 @@ while running:
 	background = pygame.image.load(bd + backgrounds[background_br]).convert_alpha()
 	background = pygame.transform.scale(background, (800,600))
 	screen.blit(background, (0, 0))
-	"""
+	
 	#zaglavlje
 	pygame.draw.rect(screen, (0, 0, 0), (0,0,MAX_WIDTH,MAX_HEIGHT/12), 0)
 	
@@ -91,7 +91,7 @@ while running:
 
 	#podnozje
 	pygame.draw.rect(screen, (0, 0, 0), (0,MAX_HEIGHT - 25,MAX_WIDTH,MAX_HEIGHT), 0)
-	"""
+	
 	#vremenska prognoza
 	if window == 'w':
 		#grad
@@ -236,7 +236,7 @@ while running:
 		screen.blit(update, (MAX_WIDTH - update_x - 2, MAX_HEIGHT - update_y - 2))
 		
 		pygame.display.update()
-		"""
+		
 	
 	#mjerenja senzora
 	if window == 's':
@@ -303,16 +303,7 @@ while running:
 		screen.blit(temp3_sbr, (QUARTER_WIDTH, 3*QUARTER_HEIGHT + temp3_sbry))
 		screen.blit(press_s, (3*QUARTER_WIDTH - press_sx, 3*QUARTER_HEIGHT))
 		screen.blit(press_sbr, (MAX_WIDTH - press_sbrx - 20, 3*QUARTER_HEIGHT + press_sbry))
-		
-		"""old version:
-		screen.blit(sensors, (HALF_WIDTH + QUARTER_WIDTH - 2*sensorsx, QUARTER_HEIGHT + 2*sensorsy))
-		screen.blit(temp_s, (HALF_WIDTH + QUARTER_WIDTH - 1.6*temp_sx, QUARTER_HEIGHT + 4*temp_sy))
-		screen.blit(temp_br, (HALF_WIDTH + QUARTER_WIDTH - 1.4*temp_brx, QUARTER_HEIGHT + 4.5*temp_bry))
-		screen.blit(hum_s, (HALF_WIDTH + QUARTER_WIDTH , QUARTER_HEIGHT + 4*hum_sy))
-		screen.blit(hum_br, (HALF_WIDTH + QUARTER_WIDTH + 2*hum_brx, QUARTER_HEIGHT + 4.5*hum_bry))
-		"""
-		
-		
+	
 		pygame.display.update()
 	
 pygame.quit()
